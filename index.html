@@ -33,6 +33,25 @@ li a {
 li a:hover:not(.active) {
     background-color: #111;
 }
+  <style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
 
 .active {
     background-color: #4CAF50;
@@ -55,11 +74,12 @@ li a:hover:not(.active) {
 </br>
 </br>
 <!-- Sends a request to the website php file to write "1" to the LED_data.txt file-->
-<b><a href="led.php?state=1">LED ON</a></b> 
+<button class="button button2"><b><a href="led.php?state=1">LED ON</a></b> </button>
 </br>
 </br>
 <!-- Sends a request to the website php file to write "0" to the LED_data.txt file-->
-<b><a href="led.php?state=0">LED OFF</a></b> 
+<button class="button button2"><b><a href="led.php?state=0">LED OFF</a></b> </button>
+ 
 </font>
 </p>
 
