@@ -1,7 +1,55 @@
+
+<!DOCTYPE html>
 <html>
 <head>
-<title>Remotely Illuminate an LED</title>
+  <title>Remotely Illuminate an LED</title>
+
+<style>
+body {margin:0;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+</style>
+</head>
 <body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<div style="padding:20px;margin-top:30px;height:1500px;">
+
 <p align="center"> 	<!--Used to center text in middle of monitor screen-->
 <font size="8">		<!--Sets the tex font size to 8 -->
 </br>
@@ -16,16 +64,7 @@
 </p>
 
 
-<?php
-$onoffdata = $_GET["state"];
-$textfile = "LED_data.txt";
-$fileLocation = "$textfile";
-$fh = fopen($fileLocation, 'w') or die("Error opening file!");
-$stringToWrite = "$onoffdata";
-fwrite($fh,$strongToWrite);
-fclose($fh);
-header("Location:index.html");
-?>
+</div>
 
 </body>
 </html>
