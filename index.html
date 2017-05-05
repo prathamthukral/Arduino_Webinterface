@@ -14,8 +14,7 @@
 <b><a href="led.php?state=0">LED OFF</a></b> 
 </font>
 </p>
-</body>
-</html>
+
 
 <?php
 $onoffdata = $_GET["state"];
@@ -27,3 +26,6 @@ fwrite($fh,$strongToWrite);
 fclose($fh);
 header("Location:index.html");
 ?>
+
+</body>
+</html>
